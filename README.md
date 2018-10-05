@@ -1,6 +1,7 @@
-# BostonHousing
+# LinearRegression
 
 Simple Linear Regression Model implemented by ModelZoo.
+
 
 ## Installation
 
@@ -9,6 +10,10 @@ Firstly you need to clone this repository and install dependencies with pip:
 ```
 pip3 install -r requirements.txt
 ```
+
+## Dataset
+
+We use BostonHousing dataset for example.
 
 ## Usage
 
