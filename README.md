@@ -1,6 +1,6 @@
 # LinearRegression
 
-Simple Linear Regression Model implemented by ModelZoo.
+Simple Linear Regression Model implemented by [ModelZoo](https://github.com/ModelZoo/ModelZoo).
 
 
 ## Installation
