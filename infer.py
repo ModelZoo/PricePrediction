@@ -2,7 +2,7 @@ from model import BostonHousingModel
 from model_zoo.inferer import BaseInferer
 import tensorflow as tf
 
-tf.flags.DEFINE_string('checkpoint_name', 'model.ckpt-38', help='Model name')
+tf.flags.DEFINE_string('checkpoint_name', 'model.ckpt-20', help='Model name')
 
 
 class Inferer(BaseInferer):
