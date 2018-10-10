@@ -1,15 +1,11 @@
-from model import BostonHousingModel
 import tensorflow as tf
 from model_zoo.trainer import BaseTrainer
 
-tf.flags.DEFINE_integer('epochs', 20, 'Max Epochs')
+tf.flags.DEFINE_integer('epochs', 20, 'Max epochs')
+tf.flags.DEFINE_string('model_class', 'BostonHousingModel', 'Model class name')
 
 
 class Trainer(BaseTrainer):
-    
-    def __init__(self):
-        BaseTrainer.__init__(self)
-        self.model_class = BostonHousingModel
     
     def prepare_data(self):
         from tensorflow.python.keras.datasets import boston_housing

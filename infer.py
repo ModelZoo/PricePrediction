@@ -1,4 +1,3 @@
-from model import BostonHousingModel
 from model_zoo.inferer import BaseInferer
 import tensorflow as tf
 
@@ -6,9 +5,6 @@ tf.flags.DEFINE_string('checkpoint_name', 'model.ckpt-20', help='Model name')
 
 
 class Inferer(BaseInferer):
-    def __init__(self):
-        BaseInferer.__init__(self)
-        self.model_class = BostonHousingModel
     
     def prepare_data(self):
         from tensorflow.python.keras.datasets import boston_housing
@@ -18,7 +14,6 @@ class Inferer(BaseInferer):
         ss.fit(x_train)
         x_test = ss.transform(x_test)
         return x_test
-
 
 if __name__ == '__main__':
     result = Inferer().run()
