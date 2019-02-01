@@ -6,6 +6,9 @@ tf.flags.DEFINE_integer('epochs', 20, 'Max epochs')
 tf.flags.DEFINE_string('model_class', 'BostonHousingModel', 'Model class name')
 
 
+# tf.flags.DEFINE_integer('steps_per_epoch', 10, help='Steps per epoch while using generator')
+
+
 class Trainer(BaseTrainer):
     
     def prepare_data(self):
@@ -14,6 +17,7 @@ class Trainer(BaseTrainer):
         x_train, x_eval = standardize(x_train, x_eval)
         train_data, eval_data = (x_train, y_train), (x_eval, y_eval)
         return train_data, eval_data
+
 
 if __name__ == '__main__':
     Trainer().run()
