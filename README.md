@@ -1,7 +1,6 @@
-# LinearRegression
+# PricePrediction
 
 Simple Linear Regression Model implemented by [ModelZoo](https://github.com/ModelZoo/ModelZoo).
-
 
 ## Installation
 
