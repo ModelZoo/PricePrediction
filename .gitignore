@@ -6,6 +6,7 @@ __pycache__/
 *$py.class
 .idea/
 model_zoo
+models/
 scores/
 # C extensions
 *.so
