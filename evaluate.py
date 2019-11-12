@@ -3,7 +3,7 @@ from model_zoo import flags
 import tensorflow as tf
 from sklearn.preprocessing import StandardScaler
 
-flags.DEFINE_string('checkpoint_name', 'model.ckpt-20', help='Model name')
+flags.DEFINE_string('checkpoint_name', 'model-20.ckpt', help='Model name')
 
 
 class Evaluater(BaseEvaluater):

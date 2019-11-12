@@ -1,9 +1,8 @@
 from model_zoo.inferer import BaseInferer
 from model_zoo.preprocess import standardize
-import tensorflow as tf
-from model_zoo import flags
+from model_zoo import flags, datasets
 
-flags.DEFINE_string('checkpoint_name', 'model.ckpt-20', help='Model name')
+flags.DEFINE_string('checkpoint_name', 'model-best.ckpt', help='Model name')
 
 
 class Inferer(BaseInferer):
@@ -16,7 +15,7 @@ class Inferer(BaseInferer):
         Predict model.
         :return:
         """
-        (x_train, y_train), (x_test, y_test) = tf.keras.datasets.boston_housing.load_data()
+        (x_train, y_train), (x_test, y_test) = datasets.boston_housing.load_data()
         _, x_test = standardize(x_train, x_test)
         return x_test
 
