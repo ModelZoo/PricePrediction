@@ -77,7 +77,7 @@ It saved the best model named `model.ckpt` according to eval score, and it also 
 
 Next we can predict using existing checkpoints and `infer.py`.
 
-Now we've restored the specified model `model.ckpt-38` and prepared test data, outputs like this:
+Now we've restored the specified model `model-best.ckpt` and prepared test data, outputs like this:
 
 ```python
 [[ 9.637125 ]
