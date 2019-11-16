@@ -7,8 +7,12 @@ flags.DEFINE_string('checkpoint_name', 'model-20.ckpt', help='Model name')
 
 
 class Evaluater(BaseEvaluater):
-
-    def prepare_data(self):
+    
+    def data(self):
+        """
+        Evaluate model.
+        :return:
+        """
         (x_train, y_train), (x_eval, y_eval) = tf.keras.datasets.boston_housing.load_data()
         ss = StandardScaler()
         ss.fit(x_train)

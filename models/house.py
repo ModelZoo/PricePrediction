@@ -1,26 +1,23 @@
-from model_zoo.model import BaseModel
+from model_zoo import Model
 import tensorflow as tf
 
 
-class HousePricePredictionModel(BaseModel):
+class HousePricePredictionModel(Model):
     """
     HousePricePredictionModel
     """
-    def __init__(self, config):
+    
+    def inputs(self):
         """
-        Init model.
-        :param config:
+        Define input shape.
+        :return:
         """
-        super(HousePricePredictionModel, self).__init__(config)
-        self.dense = tf.keras.layers.Dense(1)
-
-    def call(self, inputs, training=None, mask=None):
+        return tf.keras.Input(shape=(13))
+    
+    def outputs(self, inputs):
         """
         Build model.
         :param inputs:
-        :param training:
-        :param mask:
         :return:
         """
-        o = self.dense(inputs)
-        return o
+        return tf.keras.layers.Dense(1)(inputs)

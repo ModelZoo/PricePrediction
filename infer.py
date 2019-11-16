@@ -2,15 +2,15 @@ from model_zoo.inferer import BaseInferer
 from model_zoo.preprocess import standardize
 from model_zoo import flags, datasets
 
-flags.DEFINE_string('checkpoint_name', 'model-best.ckpt', help='Model name')
+flags.DEFINE_string('checkpoint_name', 'model-best.h5', help='Model name')
 
 
 class Inferer(BaseInferer):
     """
     Inferer for House Price Prediction.
     """
-
-    def prepare_data(self):
+    
+    def data(self):
         """
         Predict model.
         :return:
